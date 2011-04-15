@@ -2,8 +2,8 @@
 Contributors: wpmuguru
 Tags: theme, stats, statistics, multisite
 Requires at least: 3.0
-Tested up to: 3.0
-Stable tag: 2.8.1
+Tested up to: 3.1
+Stable tag: trunk
 
 Adds submenu to see theme stats, shows themes by user and most popular themes.
 
@@ -19,15 +19,14 @@ Support can be obtained through:
 
 [Twitter](http://twitter.com/wpmuguru)
 
-[WPMU Tutorials](http://wpmututorials.com/contact/)
-
-[Ron and Andrea](http://ronandandrea.com/contact/)
-
 == Installation ==
 
 1. Upload `ra-theme-stats.php` to the `/wp-content/mu-plugins/` directory
 
 == Changelog ==
+
+= 2.8.2 =
+* Update for WordPress 3.1
 
 = 2.8.1 =
 * Update for WordPress 3.0

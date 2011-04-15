@@ -3,7 +3,7 @@
 Plugin Name: Wordpress Network Theme Stats
 Plugin URI: http://wpmututorials.com/
 Description: Adds submenu to see theme stats, shows themes by user and most popular themes.
-Version: 2.8.1
+Version: 2.8.2
 Author: Ron Rennick
 Author URI: http://ronandandrea.com/
 
@@ -27,7 +27,10 @@ Author URI: http://ronandandrea.com/
 */
 class RA_Theme_Stats {
 	function RA_Theme_Stats() {
-		add_action( 'admin_menu', array( &$this, 'add_page' ) );
+		if( function_exists( 'is_network_admin' ) )
+			add_action( 'network_admin_menu', array( &$this, 'add_network_page' ) );
+		else
+			add_action( 'admin_menu', array( &$this, 'add_page' ) );
 	}
 	function add_page() {
 		if( is_super_admin() ) {
@@ -35,6 +38,11 @@ class RA_Theme_Stats {
 			if( $_GET['page'] == 'ra_theme_stats' )
 				add_action( 'admin_head', array( &$this, 'show_hide_css' ) );
 		}
+	}
+	function add_network_page() {
+		add_submenu_page('themes.php', 'Theme Stats', 'Theme Stats', 'manage_network_themes', 'ra_theme_stats', array( &$this, 'admin_page' ) );
+		if( $_GET['page'] == 'ra_theme_stats' )
+			add_action( 'admin_head', array( &$this, 'show_hide_css' ) );
 	}
 
 	function admin_page() {
@@ -50,7 +58,7 @@ class RA_Theme_Stats {
 		$blogtheme = array();
 		if ($blogs) {
 			foreach ($blogs as $blog) {
-				if( ( $blogtemplate = get_blog_option( $blog->blog_id, 'template' ) ) )
+				if( ( $blogtemplate = get_blog_option( $blog->blog_id, 'stylesheet' ) ) )
 					$blogtheme[$blog->blog_id] = $blogtemplate;
 			}
 		}
