@@ -3,7 +3,7 @@ Contributors: wpmuguru
 Tags: theme, stats, statistics, multisite
 Requires at least: 3.0
 Tested up to: 3.0
-Stable tag: trunk
+Stable tag: 2.8.1
 
 Adds submenu to see theme stats, shows themes by user and most popular themes.
 
