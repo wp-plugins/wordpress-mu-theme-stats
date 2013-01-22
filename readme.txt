@@ -1,11 +1,11 @@
 === Wordpress MU Theme Stats ===
-Contributors: wpmuguru
-Tags: theme, stats, statistics, multisite
+Contributors: wpmuguru, ravanh
+Tags: theme, stats, statistics, multisite, network
 Requires at least: 3.0
-Tested up to: 3.1
-Stable tag: trunk
+Tested up to: 3.5
+Stable tag: 2.8.2
 
-Adds submenu to see theme stats, shows themes by user and most popular themes.
+Adds theme usage statistics within your network, shows themes by user and most popular themes.
 
 == Description ==
 
@@ -13,15 +13,9 @@ Adds a Theme Stats option to the super admin menu. The admin panel lists all the
 
 This plugin goes in the mu-plugins folder. This is an updated version of the theme stats (for subdomain installs) plugin we released in 2007. This version is designed for either subdomain or subdirectory installs.
 
-Support can be obtained through:
-
-[Wordpress Forum](http://wordpress.org/support/)
-
-[Twitter](http://twitter.com/wpmuguru)
-
 == Installation ==
 
-1. Upload `ra-theme-stats.php` to the `/wp-content/mu-plugins/` directory
+1. Upload `ra-theme-stats.php` to the `/wp-content/mu-plugins/` directory or install as regular plugin and activate network-wide.
 
 == Changelog ==
 
