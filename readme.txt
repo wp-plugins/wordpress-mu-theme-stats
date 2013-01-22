@@ -1,5 +1,5 @@
 === Wordpress MU Theme Stats ===
-Contributors: wpmuguru, ravanh
+Contributors: wpmuguru, RavanH
 Tags: theme, stats, statistics, multisite, network
 Requires at least: 3.0
 Tested up to: 3.5
