@@ -1,4 +1,4 @@
-=== Wordpress MU Theme Stats ===
+=== Wordpress Multisite Theme Stats ===
 Contributors: wpmuguru, RavanH
 Tags: theme, stats, statistics, multisite, network
 Requires at least: 3.0
