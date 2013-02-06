@@ -3,7 +3,7 @@
 Plugin Name: Wordpress Network Theme Stats
 Plugin URI: http://wpmututorials.com/
 Description: Adds submenu to see theme stats, shows themes by user and most popular themes.
-Version: 2.8.2
+Version: 2.8.3
 Author: Ron Rennick
 Author URI: http://ronandandrea.com/
 
@@ -35,13 +35,13 @@ class RA_Theme_Stats {
 	function add_page() {
 		if( is_super_admin() ) {
 			add_submenu_page('ms-admin.php', 'Theme Stats', 'Theme Stats', 'manage_network_themes', 'ra_theme_stats', array( &$this, 'admin_page' ) );
-			if( $_GET['page'] == 'ra_theme_stats' )
+			if( isset( $_GET['page'] ) && $_GET['page'] == 'ra_theme_stats' )
 				add_action( 'admin_head', array( &$this, 'show_hide_css' ) );
 		}
 	}
 	function add_network_page() {
 		add_submenu_page('themes.php', 'Theme Stats', 'Theme Stats', 'manage_network_themes', 'ra_theme_stats', array( &$this, 'admin_page' ) );
-		if( $_GET['page'] == 'ra_theme_stats' )
+		if( isset( $_GET['page'] ) && $_GET['page'] == 'ra_theme_stats' )
 			add_action( 'admin_head', array( &$this, 'show_hide_css' ) );
 	}
 
