@@ -4,8 +4,8 @@ Plugin Name: Multisite Theme Stats
 Plugin URI: http://wpmututorials.com/
 Description: Adds submenu to see theme stats, shows themes by user and most popular themes.
 Version: 2.8.3
-Author: Ron Rennick
-Author URI: http://ronandandrea.com/
+Author: Ron Rennick, RavanH
+Author URI: http://wpmututorials.com/
 Network: true
 
 (original plugin contributions by Phillip Studinski)
@@ -29,10 +29,10 @@ Network: true
 class RA_Theme_Stats {
 	function __construct() {
 		if( function_exists( 'is_network_admin' ) )
-			add_action( 'network_admin_menu', array( &$this, 'add_network_page' ) );
+			add_action( 'network_admin_menu', array( $this, 'add_network_page' ) );
 		else
-			add_action( 'admin_menu', array( &$this, 'add_page' ) );
-		add_action( 'plugins_loaded', array( &$this, 'localization' ) );
+			add_action( 'admin_menu', array( $this, 'add_page' ) );
+		add_action( 'plugins_loaded', array( $this, 'localization' ) );
 	}
 	
 	function RA_Theme_Stats() {
@@ -46,15 +46,15 @@ class RA_Theme_Stats {
 		
 	function add_page() {
 		if( is_super_admin() ) {
-			add_submenu_page('ms-admin.php', __('Theme Statistics','ra-theme-stats'), __('Theme Statistics','ra-theme-stats'), 'manage_network_themes', 'ra_theme_stats', array( &$this, 'admin_page' ) );
+			add_submenu_page('ms-admin.php', __('Theme Statistics','ra-theme-stats'), __('Theme Statistics','ra-theme-stats'), 'manage_network_themes', 'ra_theme_stats', array( $this, 'admin_page' ) );
 			if( isset( $_GET['page'] ) && $_GET['page'] == 'ra_theme_stats' )
-				add_action( 'admin_head', array( &$this, 'show_hide_css' ) );
+				add_action( 'admin_head', array( $this, 'show_hide_css' ) );
 		}
 	}
 	function add_network_page() {
-		add_submenu_page('themes.php', __('Theme Statistics','ra-theme-stats'), __('Theme Statistics','ra-theme-stats'), 'manage_network_themes', 'ra_theme_stats', array( &$this, 'admin_page' ) );
+		add_submenu_page('themes.php', __('Theme Statistics','ra-theme-stats'), __('Theme Statistics','ra-theme-stats'), 'manage_network_themes', 'ra_theme_stats', array( $this, 'admin_page' ) );
 		if( isset( $_GET['page'] ) && $_GET['page'] == 'ra_theme_stats' )
-			add_action( 'admin_head', array( &$this, 'show_hide_css' ) );
+			add_action( 'admin_head', array( $this, 'show_hide_css' ) );
 	}
 
 	function admin_page() {
