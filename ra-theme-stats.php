@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Multisite Theme Stats
+Plugin Name: Multisite Theme Statistics
 Plugin URI: http://wpmututorials.com/
 Description: Adds submenu to see theme stats, shows themes by user and most popular themes.
 Version: 2.8.3

@@ -1,8 +1,8 @@
-=== Wordpress Multisite Theme Stats ===
+=== Multisite Theme Statistics ===
 Contributors: wpmuguru, RavanH
 Tags: theme, stats, statistics, multisite, network
 Requires at least: 3.0
-Tested up to: 3.5
+Tested up to: 4.1
 Stable tag: 2.8.2
 
 Adds theme usage statistics within your network, shows themes by user and most popular themes.
@@ -18,6 +18,10 @@ This plugin goes in the mu-plugins folder. This is an updated version of the the
 1. Upload `ra-theme-stats.php` to the `/wp-content/mu-plugins/` directory or install as regular plugin and activate network-wide.
 
 == Changelog ==
+
+= 2.8.3 =
+* More stats, full names
+* FIX: removed by reference
 
 = 2.8.2 =
 * Update for WordPress 3.1
