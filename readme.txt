@@ -2,8 +2,8 @@
 Contributors: wpmuguru, RavanH
 Tags: theme, stats, statistics, multisite, network
 Requires at least: 3.0
-Tested up to: 4.1
-Stable tag: 2.8.2
+Tested up to: 4.2
+Stable tag: 2.8.3
 
 Adds theme usage statistics within your network, shows themes by user and most popular themes.
 
